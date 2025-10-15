@@ -14,9 +14,10 @@
         <View
             android:id="@+id/headerBackground"
             android:layout_width="0dp"
-            android:layout_height="320dp"
-            android:background="#F7A7C0"
+            android:layout_height="350dp"
+            android:background="@drawable/header_background"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,9 +39,11 @@
             android:id="@+id/imgProduct"
             android:layout_width="180dp"
             android:layout_height="180dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="24dp"
             android:scaleType="centerCrop"
+            android:src="@drawable/imgproduct"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:background="@color/black"
@@ -76,19 +79,25 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:layout_marginEnd="32dp"
             android:gravity="center"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tvProductRating"
+
+
             tools:text="Cobertura de ganache de chocolate com paçoca triturada por cima para um toque extra de sabor e textura." />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
             android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/headerBackground">
 
@@ -164,6 +173,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
+                android:textStyle="bold"
                 android:text="Data e Hora do agendamento (opcional)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
                 android:textColor="@android:color/darker_gray"
@@ -176,12 +186,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
-                android:padding="12dp"
                 android:background="@drawable/spinner_background"
+                android:padding="12dp"
                 app:layout_constraintEnd_toStartOf="@id/spinnerTime"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvSchedulingTitle"
-                tools:entries="@array/date_options" />
+                app:layout_constraintTop_toBottomOf="@id/tvSchedulingTitle" />
 
             <Spinner
                 android:id="@+id/spinnerTime"
@@ -189,12 +198,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:padding="12dp"
                 android:background="@drawable/spinner_background"
+                android:padding="12dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/spinnerDate"
-                app:layout_constraintTop_toBottomOf="@id/tvSchedulingTitle"
-                tools:entries="@array/time_options" />
+                app:layout_constraintTop_toBottomOf="@id/tvSchedulingTitle" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
