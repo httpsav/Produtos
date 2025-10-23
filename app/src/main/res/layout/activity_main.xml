@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".ui.productdetail.ProductDetailActivity">
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -113,32 +113,34 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:orientation="horizontal">
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/btnDecreaseQty"
+                        android:id="@+id/btnIncreaseQty"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="24dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Diminuir"
-                        app:srcCompat="@drawable/ic_arrow_down" />
+                        android:contentDescription="Aumentar"
+                        app:srcCompat="@drawable/ic_arrow_up" />
+
 
                     <TextView
                         android:id="@+id/tvQuantity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingHorizontal="12dp"
+                        android:paddingStart="7dp"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textStyle="bold"
                         tools:text="1" />
 
                     <ImageButton
-                        android:id="@+id/btnIncreaseQty"
+                        android:id="@+id/btnDecreaseQty"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="24dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="Aumentar"
-                        app:srcCompat="@drawable/ic_arrow_up" />
+                        android:contentDescription="Diminuir"
+                        app:srcCompat="@drawable/ic_arrow_down" />
+
 
                 </LinearLayout>
 
@@ -180,31 +182,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/quantityPriceRow" />
 
-            <Spinner
-                android:id="@+id/spinnerDate"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/spinner_background"
-                android:padding="12dp"
-                app:layout_constraintEnd_toStartOf="@id/spinnerTime"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tvSchedulingTitle" />
-
-            <Spinner
-                android:id="@+id/spinnerTime"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/spinner_background"
-                android:padding="12dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/spinnerDate"
-                app:layout_constraintTop_toBottomOf="@id/tvSchedulingTitle" />
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.fragment.app.FragmentContainerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/fragment_container_view"
+            android:name="com.example.produtos.AgendamentoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
